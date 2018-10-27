@@ -26,11 +26,9 @@ class ConfigurationTest extends BrowserTestBase {
    * @var array
    */
   public static $modules = [
-    'system',
     'user',
     'site_api',
     'node',
-    'system_test',
   ];
 
   /**
