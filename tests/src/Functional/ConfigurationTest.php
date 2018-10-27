@@ -60,10 +60,7 @@ class ConfigurationTest extends BrowserTestBase {
     $this->assertText(t('The configuration options have been saved.'), 'The Site API Key has been saved to @siteapi.', [@siteapi => $edit['siteapikey']]);
 
     // After adding the value update the field.
-    $edit = [
-      'siteapikey' => 'FOOBAR123456',
-      'site_frontpage' => '/' . $this->nodePath,
-    ];
+    $edit['siteapikey'] = 'FOOBAR123456';
     $this->drupalPostForm(NULL, $edit, t('Update configuration'));
     $this->assertText(t('The configuration options have been saved.'), 'The Site API Key has been saved to @siteapi.', [@siteapi => $edit['siteapikey']]);
   }
